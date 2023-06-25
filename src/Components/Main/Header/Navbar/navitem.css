@@ -1,0 +1,18 @@
+.item-animation::after {
+  border: none;
+}
+
+.item-animation::after {
+  border-bottom: 2px solid white;
+  transition: 0.3s ease-in-out;
+  width: 0%;
+  display: block;
+  content: "";
+}
+
+.item-animation:hover::after {
+  content: "";
+  border-bottom: 2px solid white;
+  width: 100%;
+  display: block;
+}
