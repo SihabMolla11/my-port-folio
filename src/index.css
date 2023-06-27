@@ -10,7 +10,12 @@
   @apply bg-gradient-to-r from-[#0184ff] to-[#00e1ff];
 }
 
+
 .active {
   border-bottom: 2px solid white;
   padding-bottom: 2px;
+}
+
+.my-btn {
+  @apply mt-5  items-center uppercase p-2 border-2 rounded-md font-semibold text-white bg-none hover:bg-white hover:text-[#0193FF] transition duration-300 ease-in-out;
 }

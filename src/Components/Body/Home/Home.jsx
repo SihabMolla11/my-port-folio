@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import bannerimg from "../../../assets/lotties/banner1.json";
+import bannerimg from "../../../assets/lotties/developer.json";
 import BannerText from "./BannerText";
 
 const Home = () => {
