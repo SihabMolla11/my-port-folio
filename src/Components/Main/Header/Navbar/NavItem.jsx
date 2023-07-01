@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navitem.css";
 import { useCallback, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import { FaCode } from "react-icons/fa";
+import logo from "../../../../assets/logo.png";
 
 const NavItem = () => {
   const [open, setOpen] = useState(false);
@@ -48,9 +48,12 @@ const NavItem = () => {
 
       <div>
         {/* logo */}
-        <h2 className="text-white text-4xl flex font-bold items-center gap-2  ">
-          <FaCode /> S-CODER
-        </h2>
+        <Link to="/">
+          <div className="text-white text-4xl flex font-bold items-center gap-4  ">
+            <img src={logo} alt="" />
+            <h2>S-CODER</h2>
+          </div>
+        </Link>
       </div>
 
       <div className="hidden md:block ">

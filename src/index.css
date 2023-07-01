@@ -10,12 +10,30 @@
   @apply bg-gradient-to-r from-[#0184ff] to-[#00e1ff];
 }
 
-
 .active {
-  border-bottom: 2px solid white;
-  padding-bottom: 2px;
+  @apply md:border-b-2 md:border-white pb-[2px];
 }
 
 .my-btn {
   @apply mt-5  items-center uppercase p-2 border-2 rounded-md font-semibold text-white bg-none hover:bg-white hover:text-[#0193FF] transition duration-300 ease-in-out;
+}
+
+.navbar-active {
+  @apply bg-[#22033F] drop-shadow-xl;
+}
+
+.bg-transparent {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gradient-text {
+  background: linear-gradient(95deg, #d66cff, #850b76) 95%/200% 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

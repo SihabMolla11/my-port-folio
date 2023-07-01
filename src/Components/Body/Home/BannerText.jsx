@@ -24,7 +24,7 @@ const BannerText = () => {
         </h2>
       </div>
 
-      <p className="text-white font-medium text-lg mt-5">
+      <p className="text-white font-medium mt-5">
         Welcome to my portfolio. I am a junior full stack web developer
         specializing in HTML, CSS (including CSS frameworks like Tailwind CSS
         and Bootstrap), JavaScript, React.js, Node.js, Firebase, and MongoDB.
