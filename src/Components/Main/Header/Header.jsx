@@ -4,7 +4,6 @@ import NavItem from "./Navbar/NavItem";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const changeScroll = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 70) {
       setScroll(true);
     } else {
@@ -15,7 +14,7 @@ const Header = () => {
   window.addEventListener("scroll", changeScroll);
 
   return (
-    <div className="fixed w-full z-10 drop-shadow-md ">
+    <div className="fixed w-[100vw] z-10 drop-shadow-md ">
       <div
         className={`my-container ${
           scroll && "navbar-active"

@@ -3,6 +3,8 @@ import image1 from "../../../assets/about.png";
 import SocialIcons from "../../SocialIcons/SocialIcons";
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
+import Animated from "../../../animated/Animated";
+import DownloadResume from "../../DownloadResume/DownloadResume";
 
 const About = () => {
   const [info, setInfo] = useState("self");
@@ -18,34 +20,39 @@ const About = () => {
   }
 
   return (
-    <div className="my-container">
+    <div className="my-container" data-aos="fade-down">
       <div>
-        <h2 className="text-center  py-10 text-5xl font-bold text-white">
+        <h2
+          className="text-center  py-10 text-4xl font-bold text-white"
+          data-aos="fade-up"
+        >
           About Me
         </h2>
-        <div className=" mt-5 -mb-10 flex">
-          <div className="w-[50%]"></div>
-          <div className="w-[50%] text-white">
-            <button
-              onClick={() => setInfo("self")}
-              className={`text-lg cursor-pointer font-bold text-center md:text-start  px-4 py-2 h-12 rounded-l-lg bg-transparent ${
-                info === "self"
-                  ? "bg-[white] text-[#8B1381]"
-                  : " bg-gradient-to-l from-[#D66CFF] to-[#850B76]"
-              }`}
-            >
-              About My Self
-            </button>
-            <button
-              onClick={() => setInfo("pinfo")}
-              className={`text-lg cursor-pointer font-bold text-center md:text-start  px-4 py-2 h-12 rounded-r-lg bg-transparent ${
-                info === "pinfo"
-                  ? "bg-[white] text-[#8B1381]"
-                  : " bg-gradient-to-l from-[#D66CFF] to-[#850B76]"
-              }`}
-            >
-              Personal Info
-            </button>
+        <div className="hidden md:block">
+          <div className=" mt-5  flex">
+            <div className="w-[50%]"></div>
+            <div className="w-[50%] text-white">
+              <button
+                onClick={() => setInfo("self")}
+                className={`text-lg cursor-pointer font-bold text-center md:text-start  px-4 py-2 h-12 rounded-l-lg bg-transparent ${
+                  info === "self"
+                    ? "bg-white text-[#8B1381]"
+                    : " bg-gradient-to-l from-[#D66CFF] to-[#850B76]"
+                }`}
+              >
+                About My Self
+              </button>
+              <button
+                onClick={() => setInfo("pinfo")}
+                className={`text-lg cursor-pointer font-bold text-center md:text-start  px-4 py-2 h-12 rounded-r-lg bg-transparent ${
+                  info === "pinfo"
+                    ? "bg-white text-[#8B1381]"
+                    : " bg-gradient-to-r from-[#D66CFF] to-[#850B76]"
+                }`}
+              >
+                Personal Info
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -54,6 +61,29 @@ const About = () => {
           <img className=" w-full  " src={image1} alt="" />
         </div>
         <div className="w-full  text-white">
+          <div className="md:hidden flex my-4">
+            <button
+              onClick={() => setInfo("self")}
+              className={` cursor-pointer font-bold text-center md:text-start  px-4 py-2 h-12 rounded-l-lg bg-transparent ${
+                info === "self"
+                  ? "bg-white text-[#8B1381]"
+                  : " bg-gradient-to-l from-[#D66CFF] to-[#850B76]"
+              }`}
+            >
+              About My Self
+            </button>
+            <button
+              onClick={() => setInfo("pinfo")}
+              className={` cursor-pointer font-bold text-center md:text-start  px-4 py-2 h-12 rounded-r-lg bg-transparent ${
+                info === "pinfo"
+                  ? "bg-white text-[#8B1381]"
+                  : " bg-gradient-to-r from-[#D66CFF] to-[#850B76]"
+              }`}
+            >
+              Personal Info
+            </button>
+          </div>
+
           {info === "pinfo" && (
             <div>
               <div className="flex gap-4 md:gap-6 lg:gap-16 md:text-lg font-medium">
@@ -83,6 +113,9 @@ const About = () => {
               </div>
               <div className="mt-10">
                 <SocialIcons />
+                <div className="mt-5">
+                  <DownloadResume />
+                </div>
               </div>
             </div>
           )}
@@ -92,7 +125,7 @@ const About = () => {
               <h3 className="text-3xl font-bold">
                 Hello, <br /> This is Sihab Uddin Molla
               </h3>
-              <p>
+              <p className=" font-semibold">
                 I am a junior Mern stack Web developer. I have 6 moth+ fo
                 experience. <br />
                 I have Good knowledge about some mern stack technology. I am
@@ -103,22 +136,33 @@ const About = () => {
                 My used some Programs & tools(VSCode, figma, git, git hub,
                 firebase, netlify and vercel).
               </p>
-              <div className="flex gap-4 items-start justify-between">
+              <div className="flex flex-col md:flex-row gap-4 items-start justify-between">
                 <div className="bg-gradient-to-l from-[#D66CFF] to-[#850B76] text-center p-4 rounded-md">
-                  <p className="text-2xl w-56 font-bold ">Completed Projects</p>
+                  <p className="text-lg md:text-2xl w-56 font-bold ">
+                    Completed Projects
+                  </p>
                   <br />
-                  <span className="text-5xl flex justify-center  font-bold">
-                    <Number n={28}></Number>+
+                  <span
+                    className="md:text-5xl text-3xl flex justify-center font-bold animated-number"
+                    data-number={110}
+                  >
+                    <Animated number={28} /> +
                   </span>
                 </div>
                 <div className="  text-center bg-gradient-to-l from-[#D66CFF] to-[#850B76] p-4 rounded-md">
-                  <p className="text-2xl w-56 font-bold">Problem Solved</p>
+                  <p className="text-lg md:text-2xl w-56 font-bold">
+                    Problem Solved
+                  </p>
                   <br />
-                  <span className="text-5xl flex justify-center  font-bold">
-                    <Number n={110}></Number>+
+                  <span
+                    className="text-2xl md:text-5xl flex justify-center font-bold animated-number"
+                    data-number={110}
+                  >
+                    <Animated number={110} /> +
                   </span>
                 </div>
               </div>
+              <DownloadResume/>
             </div>
           )}
         </div>

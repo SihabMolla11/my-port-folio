@@ -1,5 +1,5 @@
-import { BiArrowToBottom } from "react-icons/bi";
 import { Typewriter } from "react-simple-typewriter";
+import DownloadResume from "../../DownloadResume/DownloadResume";
 
 const BannerText = () => {
   return (
@@ -31,11 +31,7 @@ const BannerText = () => {
         Passionate about crafting dynamic and user-friendly web experiences{" "}
       </p>
 
-      <button className="my-btn">
-        <a className="flex gap-2" href="sihabResume.pdf" download>
-          Download resume <BiArrowToBottom className="text-2xl" />
-        </a>
-      </button>
+      <DownloadResume/>
     </div>
   );
 };
