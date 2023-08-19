@@ -11,7 +11,7 @@ const Main = () => {
       <div>
         <Body />
       </div>
-      <div className="bg-[#151029d7]">
+      <div className="bg-[#0B2447]">
         <Footer />
       </div>
     </div>

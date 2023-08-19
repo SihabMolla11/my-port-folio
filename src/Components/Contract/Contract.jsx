@@ -1,7 +1,8 @@
-import Lottie from "lottie-react";
-import contract from "../../assets/lotties/contract.json";
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Lottie from "lottie-react";
+import React, { useRef } from "react";
+import { Toaster, toast } from "react-hot-toast";
+import contract from "../../assets/lotties/contract.json";
 
 const Contract = () => {
   // const handelSubmit = (e) => {
@@ -17,22 +18,16 @@ const Contract = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_zfyfye5",
-        "template_78vgphg",
-        form.current,
-        "ucmg1nWnbeEolJ2dM"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm("service_zfyfye5", "template_78vgphg", form.current, "ucmg1nWnbeEolJ2dM").then(
+      (result) => {
+        console.log(result.text);
+        e.target.reset();
+        toast.success("Email send successfully");
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
@@ -46,14 +41,8 @@ const Contract = () => {
             <Lottie animationData={contract} loop={true} />
           </div>
           <div className="w-full" data-aos="fade-left">
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className=" bg-[#e073d73a] p-12 rounded-xl"
-            >
-              <h2 className="text-center text-white font-bold my-5 text-2xl">
-                Contract Form
-              </h2>
+            <form ref={form} onSubmit={sendEmail} className=" bg-[#e073d73a] p-12 rounded-xl">
+              <h2 className="text-center text-white font-bold my-5 text-2xl">Contract Form</h2>
               <small className="text-white mx-2">Name: </small>
               <input
                 type="text"
@@ -88,6 +77,7 @@ const Contract = () => {
                 className="badge-outline hover:bg-gradient-to-r to-[#D66CFF] from-[#860C78] p-2 text-md border-[#ff83f0] text-[#ffffff] hover:text-white font-semibold border-2 rounded-md w-full cursor-pointer mt-6"
               />
             </form>
+            <Toaster />
           </div>
         </div>
       </div>
