@@ -34,7 +34,7 @@
     "livesite": "https://end-game-job-task-68bf4.web.app",
     "clientCode": "https://github.com/SihabMolla11/Endgame-job-task-clinet",
     "sarverCode": "https://github.com/SihabMolla11/EndGame-Job-Task-Sarver",
-    "image": "/src/assets/univeirsity/image1.png",
+    "image": "./image/university/image1.png",
     "technology": ["HTML-5", "CSS-3", "Tailwind CSS", "React js", "Firebase", "node Js", "Express JS", "MongoDB"],
     "detail": "This is a Simple full stake website. this website created by mern stake. In this user can see some university and user can apply for one university. ",
     "id": "4"
