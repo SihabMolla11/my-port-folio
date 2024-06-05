@@ -2,51 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 .my-container {
-  @apply max-w-[2520px] px-4 md:px-2 lg:px-20 mx-auto;
+    @apply max-w-[2520px] px-4 md:px-2 lg:px-20 mx-auto;
 }
 
 .bg-color {
-  @apply bg-gradient-to-r from-[#0184ff] to-[#00e1ff];
+    @apply bg-gradient-to-r from-[#0184ff] to-[#00e1ff];
 }
 
 .active {
-  @apply md:border-b-2 md:border-white pb-[2px] transition duration-300 ease-in-out;
+    @apply md:border-b-2 md:border-white pb-[2px] transition duration-300 ease-in-out;
 }
 
 .my-btn {
-  @apply mt-5  items-center uppercase p-2 border-2 rounded-md font-semibold text-white bg-none hover:bg-white hover:text-[#0193FF] transition duration-300 ease-in-out;
+    @apply mt-5  items-center uppercase p-2 border-2 rounded-md font-semibold text-white bg-none hover:bg-white hover:text-[#0193FF] transition duration-300 ease-in-out;
 }
 
 .navbar-active {
-  @apply bg-[#22033F] drop-shadow-xl;
+    @apply bg-[#22033F] drop-shadow-xl;
 }
 
 .bg-transparent {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .gradient-text {
-  background: linear-gradient(95deg, #d66cff, #850b76) 95%/200% 100%;
-  width: -moz-fit-content;
-  width: fit-content;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background: linear-gradient(95deg, #d66cff, #850b76) 95%/200% 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .skillBar-color {
-  @apply bg-gradient-to-r from-red-500 to-purple-800;
+    @apply bg-gradient-to-r from-red-500 to-purple-800;
 }
 
 .bg-image {
-  background-image: url(../../assets/bg-image2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    background-image: url(../../assets/bg-image2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
