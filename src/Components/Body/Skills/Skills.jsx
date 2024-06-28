@@ -1,19 +1,3 @@
-import { BiLogoFirebase } from "react-icons/bi";
-import {
-    FaBootstrap,
-    FaCss3,
-    FaHtml5,
-    FaJs,
-    FaNodeJs,
-    FaReact,
-} from "react-icons/fa";
-import {
-    SiExpress,
-    SiMongodb,
-    SiNextdotjs,
-    SiNodemon,
-    SiTailwindcss,
-} from "react-icons/si";
 import { animated, useSpring } from "react-spring";
 import { skillImages, tools } from "../../../../public/skills_images";
 
